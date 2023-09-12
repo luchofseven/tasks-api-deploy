@@ -1,4 +1,4 @@
-const z = require('zod')
+import z from 'zod'
 
 const taskScheme = z.object({
   title: z.string(),
@@ -6,15 +6,10 @@ const taskScheme = z.object({
   completed: z.boolean().default(false)
 })
 
-function validateTask (object) {
+export function validateTask (object) {
   return taskScheme.safeParse(object)
 }
 
-function validatePartialTask (object) {
+export function validatePartialTask (object) {
   return taskScheme.partial().safeParse(object)
-}
-
-module.exports = {
-  validateTask,
-  validatePartialTask
 }

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Primer rest api de prueba con Node, para la app de lista de tareas.",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"

@@ -1,12 +1,16 @@
-const crypto = require('node:crypto')
-const express = require('express')
-const tasks = require('./src/data/movies.json')
-const { validateTask, validatePartialTask } = require('./src/schemas/tasks')
+import { randomUUID } from 'node:crypto'
+import express, { json } from 'express'
+
+import { validateTask, validatePartialTask } from './src/schemas/tasks.js'
+
+import { createRequire } from 'node:module'
+const require = createRequire(import.meta.url)
+const tasks = require('./src/data/tasks.json')
 
 const app = express()
 
 // para poder acceder correctamente al req.body cuando recibimos datos en json.
-app.use(express.json())
+app.use(json())
 
 // deshabilita el header 'X-Powered-By: Express'
 app.disable('x-powered-by')
@@ -57,7 +61,7 @@ app.post('/tasks', (req, res) => {
   }
 
   const newTask = {
-    id: crypto.randomUUID(),
+    id: randomUUID(),
     ...result.data
   }
 
