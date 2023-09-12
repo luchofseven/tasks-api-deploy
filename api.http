@@ -1,0 +1,28 @@
+### Recuperar todas las tareas
+GET http://localhost:1234/tasks
+
+### Recuperar una tarea por id
+GET http://localhost:1234/tasks/975deff2-4ba6-4736-9877-ed42efcbb50d
+
+### Recuperar las tareas completadas
+GET http://localhost:1234/tasks?status=completed
+
+### Crear una nueva tarea
+POST http://localhost:1234/tasks
+Content-Type: application/json
+
+{
+    "title": "Tercer post validando datos!",
+    "description": "Test - Test - Test."
+}
+
+### Actualizar una tarea existente
+PATCH http://localhost:1234/tasks/29fdf2fe-b413-46c3-9bdf-168f77f53e8d
+Content-Type: application/json
+
+{
+    "completed": true
+}
+
+### Eliminar una tarea
+DELETE http://localhost:1234/tasks/29fdf2fe-b413-46c3-9bdf-168f77f53e8d

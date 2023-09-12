@@ -1,0 +1,20 @@
+[
+  {
+    "id": "975deff2-4ba6-4736-9877-ed42efcbb50d",
+    "title": "Primer tarea de prueba.",
+    "description": "Descripción de la primer tarea de prueba.",
+    "completed": false
+  },
+  {
+    "id": "975deff2-4ba6-4736-9877-ed42efcbb50d",
+    "title": "Segunda tarea de prueba.",
+    "description": "Descripción de la segunda tarea de prueba.",
+    "completed": true
+  },
+  {
+    "id": "975deff2-4ba6-4736-9877-ed42efcbb50d",
+    "title": "Tercer tarea de prueba.",
+    "description": "Descripción de la tercer tarea de prueba.",
+    "completed": false
+  }  
+]
