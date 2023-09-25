@@ -2,7 +2,7 @@
 GET http://localhost:1234/tasks
 
 ### Recuperar una tarea por id
-GET http://localhost:1234/tasks/975deff2-4ba6-4736-9877-ed42efcbb50d
+GET http://localhost:1234/tasks/9f0185c6-5bbb-11ee-bf3a-244bfe806715
 
 ### Recuperar las tareas completadas
 GET http://localhost:1234/tasks?status=completed
@@ -12,17 +12,19 @@ POST http://localhost:1234/tasks
 Content-Type: application/json
 
 {
-    "title": "Tercer post validando datos!",
-    "description": "Test - Test - Test."
+    "title": "Tarea agregada desde la api.",
+    "description": "Test de mysql."
 }
 
 ### Actualizar una tarea existente
-PATCH http://localhost:1234/tasks/29fdf2fe-b413-46c3-9bdf-168f77f53e8d
+PATCH http://localhost:1234/tasks/6df39753-5bcc-11ee-bf3a-244bfe806715
 Content-Type: application/json
 
 {
+    "title": "Tarea agregada desde la api.",
+    "description": "Test de mysql.",
     "completed": true
 }
 
 ### Eliminar una tarea
-DELETE http://localhost:1234/tasks/29fdf2fe-b413-46c3-9bdf-168f77f53e8d
+DELETE http://localhost:1234/tasks/7cee4b1c-5bbc-11ee-bf3a-244bfe806715
